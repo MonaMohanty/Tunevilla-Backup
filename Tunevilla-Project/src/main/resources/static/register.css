@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+body {
+    background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-951326930-1579515324.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Align items in a column */
+}
+
+form {
+    margin: 50px;
+    padding: 5px;
+}
+
+h1 {
+    padding: 20px;
+    color: rgb(0, 0, 0);
+    margin-top: 20px; /* Move the heading to the top */
+}
+
+label {
+    color: rgb(0, 0, 0);
+    font-family: sans-serif;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.outerdiv {
+    background: #2b4b70;
+    width: 400px;
+    margin: 0 auto; /* Center horizontally */
+    font-size: 13px;
+    padding: 13px;
+    border-radius: 10px;
+}
+
+#name {
+    width: 250px;
+    border: none;
+    border-radius: 5px;
+    outline: 0;
+    padding: 10px;
+    margin: 3px;
+}
+
+#num {
+    border: none;
+    border-radius: 3px;
+    color: rgb(0, 0, 0);
+}
+
+#sub {
+    width: 180px;
+    padding: 7px;
+    font-size: 16px;
+    font-family: sans-serif;
+    font-style: italic;
+    font-weight: 600;
+    border: none;
+    border-radius: 2px;
+    outline: 0;
+}

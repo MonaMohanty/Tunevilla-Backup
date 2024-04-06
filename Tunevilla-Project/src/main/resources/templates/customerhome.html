@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>CUSTOMER</title>
+		 <link rel="stylesheet" type="text/css" href="background.css">
+	</head>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			
+		}
+		h2{
+			margin-bottom: auto;
+			font-family: cursive;
+			font-weight: bold;
+			font-size: 2.5em;
+			
+		}
+	</style>
+	<body>
+		<h2>Customer Home......</h2>
+		<br><br>
+		<!--<form action="playsongs">
+			
+		<input type="submit" value="Play songs">
+		
+		</form>-->
+		
+		<!--<form action="pay">
+			
+		<input type="submit" value="Get Premium">
+		
+		</form>
+		
+		<br><br>
+		
+		<form action="logout" method="get">
+			
+		<input type="submit" value="Logout">
+		
+		</form>-->
+		<div th:unless=${ispremium} class="non-premium">
+			<form action="pay">
+			
+		<input type="submit" value="Get Premium">
+		
+		</form>
+		
+		<br><br>
+		
+		<form action="logout" method="get">
+			
+		<input type="submit" value="Logout">
+		
+		</form>
+		</div>
+		<div th:if="${ispremium}" class="premium">
+			<table border="1">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Artist</th>
+					<th>Genere</th>
+					<th>Play</th>
+				</tr>
+			</thead>
+			<tbody>
+			     <tr th:each="songs:${songs}">
+				<td th:text="${songs.name}"></td>
+				<td th:text="${songs.artist}"></tdth:text="${songs.name}">
+				<td th:text="${songs.genre}"></td>
+				<td><audio controls>
+					<source th:src="${songs.link}">
+				</audio>
+				</td>
+				</tr>
+			</tbody>
+		</table>
+		</div>
+		</body>
+</html>
